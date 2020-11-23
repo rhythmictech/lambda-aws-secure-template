@@ -5,7 +5,7 @@ FROM lambci/lambda:build-nodejs12.x
 # COPY index.js .
 COPY . .
 
-RUN npm ci
+RUN touch fake.js
 RUN zip -9yr lambda.zip .
 
 ENTRYPOINT [ "/usr/bin/true" ]
